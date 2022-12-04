@@ -8,21 +8,22 @@ pipeline {
 
             steps {
                 echo "Building "
+                mvn clean install
             }
         }
 
         stage("test") {
 
-                    steps {
-                        echo "Testing "
-                    }
-                }
+            steps {
+                echo "Testing "
+            }
+        }
 
         stage("delpoy") {
 
-                    steps {
-                        echo "Deploying "
-                    }
-                }
+             steps {
+                echo "Deploying "
+             }
+        }
     }
 }
