@@ -10,5 +10,19 @@ pipeline {
                 echo "Building "
             }
         }
+
+        stage("test") {
+
+                    steps {
+                        echo "Testing "
+                    }
+                }
+
+        stage("delpoy") {
+
+                    steps {
+                        echo "Deploying "
+                    }
+                }
     }
 }
