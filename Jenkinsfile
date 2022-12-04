@@ -8,7 +8,9 @@ pipeline {
 
             steps {
                 echo "Building "
-                mvn clean install
+                maven("maven 3") {
+                    sh 'mvn clean install'
+                }
             }
         }
 
