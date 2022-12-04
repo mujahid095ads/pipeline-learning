@@ -8,7 +8,7 @@ pipeline {
 
             steps {
                 echo "Building "
-                maven("maven 3") {
+                withMaven(maven: "Maven_3_8_6") {
                     sh 'mvn clean install'
                 }
             }
