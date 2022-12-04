@@ -2,15 +2,17 @@ pipeline {
 
     agent any
 
+    tools {
+        maven 'Maven_3_8_6'
+    }
+
     stages {
 
         stage("build") {
 
             steps {
                 echo "Building "
-                withMaven(maven: "Maven_3_8_6") {
-                    sh 'mvn clean install'
-                }
+                sh 'mvn clean install'
             }
         }
 
